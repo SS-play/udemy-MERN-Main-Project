@@ -9,7 +9,6 @@ const UsersList = (props) => {
     return (
       <div className="center">
         <Card>
-          {" "}
           <h2>no users found</h2>
         </Card>
       </div>
@@ -17,17 +16,15 @@ const UsersList = (props) => {
   }
   return (
     <ul className="user-item">
-      {props.item.map((user) => {
-        return (
-          <UsersItem
-            key={user.id}
-            id={user.id}
-            image={user.image}
-            name={user.name}
-            placeCount={user.places}
-          />
-        );
-      })}
+      {props.item.map((user) => (
+        <UsersItem
+          key={user.id}
+          id={user.id}
+          image={user.image}
+          name={user.name}
+          placeCount={user.places}
+        />
+      ))}
     </ul>
   );
 };
